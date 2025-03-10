@@ -1,4 +1,5 @@
 # Projeto de estudo, seguindo o conteúdo apresentado no curso 'TypeScript para Angular'
+As anotações tiradas serão focadas nas características específicas do TypeScript; Conceitos comuns a outras linguagens não terão destaque.
 
 ## Anotações
 
@@ -21,3 +22,19 @@
 - Definindo um script no arquivo package.json, consigo criar um atalho para compilar e executar o projeto; Foi criado como:
     `"start": "npx tsc && node target/index.js"`
 Assim, ao digitar o comando `npm run start`, consigo compilar e executar o projeto.
+
+#### Tipagem e Sintaxe da Linguagem
+- No TS, tipos numéricos não são espeficicados como em uma linguagem mais tradicional; Usa-se o tipo `number`, tanto para inteiros quanto para reais.
+- A sintaxe de declaração de tipos é feita com uso de `:`; Como em: `let nome:string = "Pedro";`.
+- Na declaração de uma variável, não é necessário sempre declarar o tipo.
+- Os tipos `null` e `undefined` obrigam a variável a receber como valor apenas eles mesmos; Como um exemplo:
+    ```
+    let nome: null = null; // nome só pode assumir o valor null
+    let idade: undefined = undefined // idade só pode assumir o valor undefined
+    ```
+- O tipo `void` define que não pode haver valor; É utilizado como tipo de retorno, geralmente.
+- O tipo `any` é um tipo 'abrangente'; Variáveis do tipo `any` podem receber valores de qualquer tipo.
+- O tipo `object` define que a variável deve ser um objeto mas não define que tipo específico.
+- Arrays podem conter vários tipos; Declarado como: `let arr: (<tipo-1> | <tipo-2>)[]`.
+- Tuples são como objetos 'light', recebendo um número definido de valores com tipos definidos; Declara-se uma tupla com: `let tup:[<tipo-1>, <tipo-2>, ..., <tipo-n>]`;
+- O tipo `Date` trabalha com o padrão americano de datas: 'yyyy-mm-dd hh:mm'.
